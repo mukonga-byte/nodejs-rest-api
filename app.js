@@ -1,14 +1,13 @@
-var express = require('express');
+const express = require('express');
+const app = express();
 
-var app = express();
+const port = process.env.PORT || 3000;
 
-var port =process.env.PORT || 3000;
-
-app.get('/', (req, res)=> {
-	res.send('welcome to my API');
+app.get('/', (req, res) => {
+	res.send('welcome to my Muhang API');
 });
 
 
-app.listen(port, ()=> {
-	console.log('running on port' + port);
+app.listen(port, () => {
+	console.log(`running on port ${port}`);
 })
